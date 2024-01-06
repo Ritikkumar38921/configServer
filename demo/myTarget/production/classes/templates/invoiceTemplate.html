@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+<style>
+@page {
+	size: ledger;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+tr {
+	page-break-inside: avoid
+}
+
+body {
+	padding: 50px;
+}
+</style>
+</head>
+<body>
+
+    <p>Hi Ritik</p>
+    <p>Please find below Summary</p>
+
+    <div
+		style="width: 100%; margin-top: 5px; clear: both;">
+		<!-- this is invoice code  -->
+		<table
+			style="width: 100%; border-collapse: collapse; border: 1px solid rgb(0, 0, 0);">
+
+			<caption
+				style="border: 1px solid black; font-size: 30px; font-weight: 700; margin: auto; padding: 0px; text-align: center; color: black; background-color: rgb(234, 255, 8); padding: 9px 0 9px 0;">Annexure
+				to Invoice</caption>
+			<caption
+				style="text-align: left; font-size: 15px; padding: 10px 0px;">Payout
+				Details Given Below</caption>
+			<thead>
+                <th style="border: 1px solid rgb(0, 0, 0); text-align: center;">id</th>
+                <th style="border: 1px solid rgb(0, 0, 0); text-align: center;">Case Id</th>
+                <th style="border: 1px solid rgb(0, 0, 0); text-align: center;">Payee Name</th>
+                <th style="border: 1px solid rgb(0, 0, 0); text-align: center;">Program Cycle Name</th>
+                <th style="border: 1px solid rgb(0, 0, 0); text-align: center;">Disbursal Amount</th>
+                <th style="border: 1px solid rgb(0, 0, 0); text-align: center;">Hold Amount</th>
+                <th style="border: 1px solid rgb(0, 0, 0); text-align: center;">Released Amount</th>
+                <th style="border: 1px solid rgb(0, 0, 0); text-align: center;">Payout</th>
+                <th style="border: 1px solid rgb(0, 0, 0); text-align: center;">Total Payable Amount</th>
+                <th style="border: 1px solid rgb(0, 0, 0); text-align: center;">Status</th>
+				<th style="border: 1px solid rgb(0, 0, 0); text-align: center;">businessKey</th>
+                <th style="border: 1px solid rgb(0, 0, 0); text-align: center;">businessKeyType</th>
+			</thead>
+			<tbody>
+				<tr  th:object="${payload.caseWiseStatusReport}">>
+					<td style="border: 1px solid rgb(0, 0, 0); text-align: center;" th:text="*{id}"></td></tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

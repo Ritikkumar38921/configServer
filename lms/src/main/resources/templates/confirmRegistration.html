@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</style>
+</head>
+<body style="margin: 0; padding: 0;background-color:rgb(126, 201, 221) ;">
+    <h3 style="text-align: center;width: 50vw;margin: auto;padding: 10px;" th:text="${source}">lms Product</h3>
+  
+	<div style="background-color: rgb(229, 228, 231); width: 50vw;margin: auto;padding: 5px 10px;">
+            <h3>Hi <span th:text="${userName}"></span></h3>
+            <h3>Please Confirm Your Account...</h3>
+            <p>Confirm Your Account <a style="cursor: pointer;" th:href="${url}">Click Here</a></p>
+    </div>
+
+</body>
+</html>

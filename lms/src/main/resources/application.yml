@@ -1,0 +1,13 @@
+server:
+  port: 9000
+spring:
+  config:
+    name: "LMS Config Server"
+  cloud:
+    config:
+      server:
+        accept-empty: false #return 404 if the application is not found
+        git:
+          uri: "C:\Users\Ritik_Kumar\Desktop\configServer.properties.txt"
+          clone-on-start: true
+          skip-ssl-validation: true

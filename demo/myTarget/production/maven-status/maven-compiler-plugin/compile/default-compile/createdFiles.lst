@@ -1,0 +1,4 @@
+com\thymeleaf\demo\DemoApplication.class
+com\thymeleaf\demo\TestController.class
+com\thymeleaf\demo\TestService.class
+com\thymeleaf\demo\config\TemplateConfig.class
